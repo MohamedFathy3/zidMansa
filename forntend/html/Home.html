@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="../css/dropdoun.css">
     <link rel="stylesheet" href="../css/sectionwithImage.css">
     <link rel="stylesheet" href="../css/sectioncardproduct.css">
+    <link rel="stylesheet" href="../css/sectiionbackgriund.css">
   </head>
   <body>
 
@@ -163,7 +164,7 @@
 
 
     <!--start section curser-->
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -727,51 +728,7 @@
     </ul>
 </div>
 
-<script>
-    $(document).ready(function() {
-       var $tickerWrapper = $(".tickerwrapper");
-       var $list = $tickerWrapper.find("ul.list");
-       var $clonedList = $list.clone(); // استنساخ القائمة
-       var listWidth = 0;
-   
-       // حساب عرض القائمة كاملة
-       $list.find("li").each(function(i) {
-           listWidth += $(this).outerWidth(true); // جمع العرض الإجمالي
-       });
-   
-       // تحديد العرض الإجمالي للقائمتين
-       var totalWidth = listWidth * 2;
-   
-       // تعيين العرض الإجمالي
-       $list.add($clonedList).css({
-           "width": totalWidth + "px" // تعيين العرض الإجمالي
-       });
-   
-       // إضافة النسخة المستنسخة إلى الحاوية
-       $clonedList.addClass("cloned").appendTo($tickerWrapper);
-   
-       // تعريف الأنيميشن باستخدام GSAP (TimelineMax)
-       var infinite = new TimelineMax({repeat: -1, paused: true});
-       var time = 40; // وقت الحركة
-   
-       infinite
-           .fromTo($list, time, {x: 0}, {x: -listWidth, ease: Linear.easeNone}, 0) // الحركة من اليمين لليسار
-           .fromTo($clonedList, time, {x: listWidth}, {x: 0, ease: Linear.easeNone}, 0) // بدء النسخة المستنسخة عند نهاية الحركة
-           .set($list, {x: listWidth}) // إعادة تعيين العنصر الأصلي ليبدأ من اليمين بعد الانتهاء من الحركة
-           .to($clonedList, time, {x: -listWidth, ease: Linear.easeNone}, time)
-           .to($list, time, {x: 0, ease: Linear.easeNone}, time)
-           .progress(1).progress(0)
-           .play();
-   
-       // إيقاف وتشغيل الحركة عند التمرير فوق العنصر
-       $tickerWrapper.on("mouseenter", function(){
-           infinite.pause();
-       }).on("mouseleave", function(){
-           infinite.play();
-       });
-   });
-   
-            </script>
+
 <!--end section word animathion-->
 
 <!--section heigthscreen-->
@@ -921,7 +878,7 @@
 
 <!--sectionproductcard-->
 <section class="showproduct">
-    <button class="scroll-btn left" onclick="scrollToLeft()">&#10094;</button>
+    <button class="scroll-btn left" style="position: absolute; right: 0;;" onclick="scrollToLeft()">&#10094;</button>
     <div class="products">
         <!-- First Card -->
         <div class="cards">
@@ -994,28 +951,217 @@
     </div>
     <button class="scroll-btn right" onclick="scrollToRight()">&#10095;</button>
 </section>
-<script>
-// Select the products container
-const productsContainer = document.querySelector('.products');
-
-// Scroll left function
-function scrollToLeft() {
-    productsContainer.scrollBy({ left: -300, behavior: 'smooth' });
-}
-
-// Scroll right function
-function scrollToRight() {
-    productsContainer.scrollBy({ left: 300, behavior: 'smooth' });
-}
 
 
 
-</script>
+
+
+
+
+
+
+
 <!--endsectionproductcard-->
 
+<!--productsingl -->
+<div class="container mt-5 mb-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10">
+            <div class="card" style="border: none;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="images p-3">
+                            <div class="text-center p-4"> <img id="main-image" src="../images/all1.webp" width="250" /> </div>
+                            <div class="thumbnail text-center"> <img onclick="change_image(this)" src="../images/all3.webp" width="70"> <img onclick="change_image(this)" src="../images/all2.webp" width="70"> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product p-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                            </div>
+                            <div class="mt-4 mb-3"> <span class="text-uppercase text-muted brand">Orianz</span>
+                                <h5 class="text-uppercase">Men's slim fit t-shirt</h5>
+                                <div class="price d-flex flex-row align-items-center"> <span class="act-price">$20</span>
+                                    <div class="ml-2"> <small class="dis-price">$59</small> <span>40% OFF</span> </div>
+                                </div>
+                            </div>
+                            <p class="about">Shop from a wide range of t-shirt from orianz. Pefect for your everyday use, you could pair it with a stylish pair of jeans or trousers complete the look.</p>
+                            <div class="sizes mt-5">
+                                <h6 class="text-uppercase">Size</h6> <label class="radio"> <input type="radio" name="size" value="S" checked> <span>S</span> </label> <label class="radio"> <input type="radio" name="size" value="M"> <span>M</span> </label> <label class="radio"> <input type="radio" name="size" value="L"> <span>L</span> </label> <label class="radio"> <input type="radio" name="size" value="XL"> <span>XL</span> </label> <label class="radio"> <input type="radio" name="size" value="XXL"> <span>XXL</span> </label>
+                            </div>
+                            <div class="cart mt-4 align-items-center">             <a href="#" class="btn-slide">Shop Now</a>
+                                <a href="#" class="btn-slide">Bey Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--endproductsingl -->
 
 
 
+
+<!--cardpages-->
+
+<section id="gallery" >
+    <div class="container" >
+      <div class="row" style="overflow: auto; flex-wrap: nowrap;">
+      <div class="col-lg-4 mb-4">
+      <div class="card" style="border: none;">
+        <img src="../images/girls.webp" alt="" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title" style="opacity: .6;">Sunset</h5>
+          <p class="card-text" style="opacity: .6;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+         <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+          
+        </div>
+       </div>
+      </div>
+    <div class="col-lg-4 mb-4">
+    <div class="card" style="border: none;">
+        <img src="../images/nile.webp" alt="" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title" style="opacity: .6;">Sunset</h5>
+          <p class="card-text" style="opacity: .6;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+         <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+          
+        </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+      <div class="card" style="border: none;">
+        <img src="../images/cob.webp" alt="" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title" style="opacity: .6;">Sunset</h5>
+          <p class="card-text" style="opacity: .6;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+         <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!--endcardpages-->
+
+  <!--startsectionbakground-->
+  <section class="background-section">
+    <div class="center-card">
+        <h2>1% For the Plane</h2>
+        <p>August is a proud member of 1% For The Planet</p>
+        <p>Learn more</p>
+    </div>
+</section>
+
+  <!--endsectionbakground-->
+
+
+  <div class="cards-container">
+    <h2 style="position: relative;left: 40%; top: 20px; border-bottom: 1px solid black; width: 25%; text-transform: uppercase;">@augustethelabel</h2>
+    <div style="overflow-x: auto; display: flex; gap: 20px; width: 100%; padding: 120px;">
+
+        <div class="card" style="max-width:200px; flex-shrink: 0;">
+            <img src="../images/all1.webp" class="card-img-top" alt="...">
+        </div>
+        
+        <div class="card" style="max-width: 200px; flex-shrink: 0;">
+            <img src="../images/all1.webp" class="card-img-top" alt="...">
+        </div>
+        
+        <div class="card" style="max-width: 200px; flex-shrink: 0;">
+            <img src="../images/all1.webp" class="card-img-top" alt="...">
+        </div>
+        
+        <div class="card" style="max-width: 200px; flex-shrink: 0;">
+            <img src="../images/all1.webp" class="card-img-top" alt="...">
+        </div>
+        
+        <div class="card" style="max-width: 200px; flex-shrink: 0;">
+            <img src="../images/all1.webp" class="card-img-top" alt="...">
+        </div>
+    
+    </div>
+   
+</div>
+
+
+
+
+
+
+
+<section class="container py-5">
+    <div class="row row-cols-1 row-cols-md-4 g-4 overflow-auto flex-nowrap">
+        <!-- First Card -->
+        <div class="col text-dark" style="opacity:.6;text-transform: uppercase; ">
+            <div class="card border-0">
+                <div class="card-body">
+                    <h2 class="card-title">
+                        <svg aria-hidden="true" focusable="false" fill="none" stroke-width="1.5" width="20" class="hidden sm:block icon icon-picto-earth" viewBox="0 0 24 24">
+                            <path clip-rule="evenodd" d="M12 23.25c6.213 0 11.25-5.037 11.25-11.25S18.213.75 12 .75.75 5.787.75 12 5.787 23.25 12 23.25Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path clip-rule="evenodd" d="M7.079 15.75a1.5 1.5 0 0 0 1.455-1.864l-.75-3A1.5 1.5 0 0 0 6.329 9.75H.976a11.246 11.246 0 0 0 4.016 11.042L6 15.75h1.079Zm13.906-10.5h-4.064a1.5 1.5 0 0 0-1.455 1.136l-.75 3a1.5 1.5 0 0 0 1.455 1.864h1.579l.791 4.75a1.5 1.5 0 0 0 1.48 1.253h1.925a11.2 11.2 0 0 0-.961-12V5.25Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </h2>
+                    <p class="card-text text-center">Our pledge</p>
+                    <p class="text-center">Preserving our natural environment for a healthier planet</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Card -->
+        <div class="col text-dark" style="opacity:.6;text-transform: uppercase; ">
+            <div class="card border-0">
+                <div class="card-body">
+                    <h2 class="card-title">
+                        <svg aria-hidden="true" focusable="false" fill="none" stroke-width="1.5" width="20" class="sm:hidden icon icon-picto-plane" viewBox="0 0 24 24">
+                            <path clip-rule="evenodd" d="m20.055 20.198.654-.654c.36-.36.502-.885.373-1.378l-2.326-8.837 3.075-3.075a2.972 2.972 0 0 0 .422-3.794 2.867 2.867 0 0 0-4.369-.37l-3.183 3.185L5.867 2.95a1.434 1.434 0 0 0-1.38.373l-.653.654A1.434 1.434 0 0 0 4.11 6.22l6.03 3.618-4.589 5.2-1.434.02a1.434 1.434 0 0 0-1.225.37L1.46 16.74a.716.716 0 0 0 .225 1.165l2.767 1.56 1.816 2.864a.718.718 0 0 0 1.166.224l1.251-1.193c.354-.333.515-.822.428-1.3l.023-1.438 5.058-4.73 3.618 6.03a1.434 1.434 0 0 0 2.243.276Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </h2>
+                    <p class="card-text text-center">Free express shipping</p>
+                    <p class="card-text text-center">On all AU & New Zealand orders over</p>
+                    <p class="text-center">$150</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Card -->
+        <div class="col text-dark" style="opacity:.6;text-transform: uppercase; ">
+            <div class="card border-0">
+                <div class="card-body">
+                    <h2 class="card-title">
+                        <svg aria-hidden="true" focusable="false" fill="none" stroke-width="1.5" width="20" class="sm:hidden icon icon-picto-return" viewBox="0 0 24 24">
+                            <path d="m1.25 15.08 2.207-3.384 3.385 2.206" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M13.13 2.5a9.525 9.525 0 1 1 0 19.049 9.68 9.68 0 0 1-9.673-9.853" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </h2>
+                    <p class="card-text text-center">Easy returns</p>
+                    <p class="text-center">Within 14 days of purchase date</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fourth Card -->
+        <div class="col text-dark" style="opacity:.6;text-transform: uppercase; ">
+            <div class="card border-0">
+                <div class="card-body">
+                    <h2 class="card-title">
+                        <svg aria-hidden="true" focusable="false" fill="none" stroke-width="1.5" width="20" class="sm:hidden icon icon-picto-credit-card" viewBox="0 0 24 24">
+                            <path clip-rule="evenodd" d="M.75 5.25a1.5 1.5 0 0 1 1.5-1.5h19.5a1.5 1.5 0 0 1 1.5 1.5v13.5a1.5 1.5 0 0 1-1.5 1.5H2.25a1.5 1.5 0 0 1-1.5-1.5V5.25Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M.75 8.25h22.5m-18 4.5h8.25m-8.25 3h5.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </h2>
+                    <p class="card-text text-center">Take advantage of a payment in 3x</p>
+                    <p class="text-center">without fees from $100 of purchase</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
@@ -1327,6 +1473,92 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 </script>
+<script>
+    function change_image(image){
 
+var container = document.getElementById("main-image");
+
+container.src = image.src;
+}
+
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+
+});
+</script>
+
+
+
+
+
+
+<script>
+    $(document).ready(function() {
+       var $tickerWrapper = $(".tickerwrapper");
+       var $list = $tickerWrapper.find("ul.list");
+       var $clonedList = $list.clone(); // استنساخ القائمة
+       var listWidth = 0;
+   
+       // حساب عرض القائمة كاملة
+       $list.find("li").each(function(i) {
+           listWidth += $(this).outerWidth(true); // جمع العرض الإجمالي
+       });
+   
+       // تحديد العرض الإجمالي للقائمتين
+       var totalWidth = listWidth * 2;
+   
+       // تعيين العرض الإجمالي
+       $list.add($clonedList).css({
+           "width": totalWidth + "px" // تعيين العرض الإجمالي
+       });
+   
+       // إضافة النسخة المستنسخة إلى الحاوية
+       $clonedList.addClass("cloned").appendTo($tickerWrapper);
+   
+       // تعريف الأنيميشن باستخدام GSAP (TimelineMax)
+       var infinite = new TimelineMax({repeat: -1, paused: true});
+       var time = 40; // وقت الحركة
+   
+       infinite
+           .fromTo($list, time, {x: 0}, {x: -listWidth, ease: Linear.easeNone}, 0) // الحركة من اليمين لليسار
+           .fromTo($clonedList, time, {x: listWidth}, {x: 0, ease: Linear.easeNone}, 0) // بدء النسخة المستنسخة عند نهاية الحركة
+           .set($list, {x: listWidth}) // إعادة تعيين العنصر الأصلي ليبدأ من اليمين بعد الانتهاء من الحركة
+           .to($clonedList, time, {x: -listWidth, ease: Linear.easeNone}, time)
+           .to($list, time, {x: 0, ease: Linear.easeNone}, time)
+           .progress(1).progress(0)
+           .play();
+   
+       // إيقاف وتشغيل الحركة عند التمرير فوق العنصر
+       $tickerWrapper.on("mouseenter", function(){
+           infinite.pause();
+       }).on("mouseleave", function(){
+           infinite.play();
+       });
+   });
+   
+            </script>
+
+
+
+
+
+<script>
+    // Select the products container
+    const productsContainer = document.querySelector('.products');
+    
+    // Scroll left function
+    function scrollToLeft() {
+        productsContainer.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+    
+    // Scroll right function
+    function scrollToRight() {
+        productsContainer.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+    
+    
+    
+    </script>
 </body>
 </html>

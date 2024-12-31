@@ -1,38 +1,41 @@
 .showproduct {
+    position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
     background-color: white;
-    border: none;
 }
 
 .products {
     border: none;
     overflow-x: auto;
     display: flex;
-    scroll-snap-type: x mandatory; /* Scroll snap functionality */
-    gap: 20px; /* Space between cards */
+   
+    scroll-snap-type: x mandatory;
+    gap: 20px;
     padding: 20px;
+    width: 100%;
+    overflow: auto;
 }
-.products::-webkit-scrollbar{
+
+.products::-webkit-scrollbar {
     display: none;
 }
+
 .cards {
     display: flex;
-    flex: 0 0 100%; /* Each card takes the full width of the container */
-    scroll-snap-align: center; /* Snap to the center of the viewport */
+    flex: 0 0 100%; /* كل بطاقة تأخذ العرض الكامل */
+    scroll-snap-align: center;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	border: none !important;
+    border: none;
 }
 
 .cards .images {
-    border: none;
     width: 80%;
 }
 
 .cards .images img {
-    border: none;
     width: 100%;
 }
 
@@ -42,6 +45,7 @@
 
 .text img {
     width: 50%;
+    
 }
 
 .text p {
@@ -62,49 +66,33 @@
     margin-top: 25px;
 }
 
-.showproduct {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: white;
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .products {
+        gap: 10px;
+        flex-wrap: nowrap;
+        flex-shrink: 0;
+    }
+
+    .cards {
+        flex: 0 0 100%;
+        display: block; /* كل بطاقة تأخذ العرض الكامل وتكون عمودية */
+    }
+
+    .cards .images {
+        width: 100%; /* الصورة تأخذ العرض الكامل */
+    }
+
+    .text {
+        padding-left: 20px; /* تقليل المسافة على اليسار */
+    }
+
+    .scroll-btn {
+        display: none; /* إخفاء الأزرار على الشاشات الصغيرة */
+    }
+    .text img{
+    display: none;
+
+    }
 }
 
-.products {
-    border: none;
-    overflow-x: auto;
-    display: flex;
-    scroll-snap-type: x mandatory;
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-}
-
-.cards {
-    display: flex;
-    flex: 0 0 80%; /* Each card takes 80% of the container's width */
-    scroll-snap-align: center;
-    border: 1px solid #ccc;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    z-index: 10;
-}
-
-.scroll-btn.left {
-    left: 0;
-}
-
-.scroll-btn.right {
-    right: 0;
-}
