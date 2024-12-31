@@ -1,0 +1,167 @@
+/* تعيين تصميم القسم */
+.hero-section {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    height: 400px; /* ارتفاع القسم */
+    background-image: url('../images/backsection.webp'); /* استبدل هذه الصورة بصورتك */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    text-align: center; /* تأكد من محاذاة النص في المنتصف */
+    overflow: hidden; /* إخفاء المحتوى الذي يخرج من الصورة */
+}
+
+/* حاوية النص والمحتوى */
+.content {
+    display: flex;
+    justify-content: space-between; /* النص والعد التنازلي بجانب بعض */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    flex-wrap: wrap; /* تمكين العناصر من الانكسار عندما تصبح الشاشة صغيرة */
+    box-sizing: border-box;
+}
+
+/* تنسيق النص */
+.text-container {
+    max-width: 50%; /* النص يشغل نصف العرض */
+    text-align: left;
+    padding-right: 10px;
+}
+
+/* نص العنوان */
+.text-container h2 {
+    font-size: 20px; /* حجم الخط في الهواتف */
+    margin-bottom: 10px;
+}
+
+.text-container h1 {
+    font-size: 30px; /* حجم الخط في الهواتف */
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    font-size: 14px; /* حجم الخط في الهواتف */
+    margin-bottom: 20px;
+}
+
+/* حاوية العد التنازلي */
+.countdown-container {
+    display: flex;
+    justify-content: space-between; /* توزيع العد التنازلي على المسافة المتاحة */
+    gap: 10px; /* مسافة أكبر بين العد التنازلي */
+    width: 100%;
+    max-width: 40%; /* عرض العد التنازلي 40% من العرض الكلي */
+    justify-content: flex-start; /* محاذاة العد التنازلي لليسار */
+    margin-top: 20px; /* إضافة مسافة فوق العد التنازلي */
+}
+
+/* تنسيق كل عنصر عد تنازلي */
+.countdown-item {
+    background-color: rgba(201, 189, 189, 0.7); /* خلفية بيضاء شفافة */
+    border-radius: 10px;
+    padding: 15px 20px; /* زيادة padding لإعطاء المسافة بين الأرقام */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: auto; /* عرض مرن */
+    margin-bottom: 10px;
+}
+
+/* تنسيق الرقم في العد التنازلي */
+.countdown-item span {
+    font-size: 30px; /* زيادة حجم الرقم */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* تنسيق النص داخل العد التنازلي */
+.countdown-item p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* التعديل عند الشاشات الصغيرة (أقل من 768px) */
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column; /* تغيير الاتجاه إلى عمودي */
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-container {
+        max-width: 80%; /* النص يشغل 80% من العرض */
+        text-align: center; /* محاذاة النص في المنتصف */
+    }
+
+    .countdown-container {
+        max-width: 100%; /* العد التنازلي يشغل 100% من العرض */
+        justify-content: center; /* محاذاة العد التنازلي في المنتصف */
+        margin-top: 20px; /* إضافة مسافة بين النص والعد التنازلي */
+    }
+
+    .countdown-item {
+        width: auto; /* جعل العد التنازلي مرنًا */
+        margin-bottom: 10px; /* إضافة مسافة بين العناصر */
+    }
+
+    /* تعديل حجم الخط في الهواتف الصغيرة */
+    .text-container h2 {
+        font-size: 18px; /* تقليل حجم الخط */
+    }
+
+    .text-container h1 {
+        font-size: 24px; /* تقليل حجم الخط */
+    }
+
+    .text-container p {
+        font-size: 14px; /* تقليل حجم الخط */
+    }
+
+    .countdown-item span {
+        font-size: 16px; /* تقليل حجم الرقم */
+    }
+
+    .countdown-item p {
+        font-size: 12px; /* تقليل حجم النص */
+    }
+}
+
+/* التعديل عند الشاشات الصغيرة جدًا (أقل من 480px) */
+@media screen and (max-width: 480px) {
+    .hero-section {
+        height: 600px; /* تقليل ارتفاع الصورة على الشاشات الصغيرة */
+    }
+
+    .text-container {
+        max-width: 100%; /* النص يشغل كامل العرض */
+        text-align: center; /* محاذاة النص في المنتصف */
+        padding: 10px; /* إضافة مسافة حول النص */
+    }
+
+    .countdown-container {
+        max-width: 100%; /* العد التنازلي يشغل 100% من العرض */
+        justify-content: center; /* محاذاة العد التنازلي في المنتصف */
+    }
+
+    .countdown-item {
+        padding: 10px; /* تقليل padding في العد التنازلي */
+        width: auto;
+    }
+
+    .countdown-item span {
+        font-size: 14px; /* تقليل حجم الرقم */
+    }
+
+    .countdown-item p {
+        font-size: 10px; /* تقليل حجم النص */
+    }
+}

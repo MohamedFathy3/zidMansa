@@ -1,0 +1,1332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Carousel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/curserFirstsection.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/section1.css">
+    <link rel="stylesheet" href="../css/setion2images.css">
+    <link rel="stylesheet" href="../css/textprogrph.css">
+    <link rel="stylesheet" href="../css/continersheifth.css">
+    <link rel="stylesheet" href="../css/dropdoun.css">
+    <link rel="stylesheet" href="../css/sectionwithImage.css">
+    <link rel="stylesheet" href="../css/sectioncardproduct.css">
+  </head>
+  <body>
+
+<!--startheader-->
+<header class="px-4">
+    <nav class="navbar navbar-expand-lg bg-body-white">
+        <div class="container-fluid">
+            <!-- Main navbar content wrapper -->
+            <div class="d-flex justify-content-between align-items-center w-100">
+                 <!-- Add toggle button -->
+            <button class="btn btn-outline-dark  border-0 d-lg-none me-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          
+                <!-- Left menu items - visible only on desktop -->
+                <ul class="navbar-nav gap-4 d-none d-lg-flex">
+                  <li class="nav-item">
+                      <a class="nav-link text-uppercase fs-5 fw-light" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link fs-5 text-uppercase fw-light" href="#">wrap</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link fs-5 text-uppercase fw-light  " href="#">maxi</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link fs-5 text-uppercase fw-light" href="#">midi</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link fs-5 text-uppercase fw-light" href="#">mini</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link fs-5 text-uppercase fw-light" href="#">Slip</a>
+                  </li>
+              </ul>
+                <!-- Center logo - adjusted for mobile -->
+                <div class="col-6 col-lg-4 d-flex justify-content-center px-4">
+                    <img src="../images/logo.webp" alt="Prestige logo" class="img-fluid">
+                </div>
+
+                <!-- Right side icons - modify visibility -->
+                <div>
+                    <ul class="d-flex align-items-center gap-3 list-unstyled mt-3">
+                        <li class="nav-item d-none d-lg-flex align-items-center gap-2">
+                            <!-- SRA logo and text -->
+                            <img src="../images/s1.jpg" width="40" height="30" alt="SRA logo">
+                            <p class="fs-5 text-uppercase fw-light mb-0">sra</p>
+                        </li>
+                        <li class="nav-item d-none d-md-flex align-items-center gap-2">
+                            <!-- User icon button -->
+                            <button class="btn" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#searchForm" aria-expanded="false" aria-controls="searchForm">
+                              <svg  xmlns="http://www.w3.org/2000/svg"  width="30"  height="30"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+                            </button>
+                        </li>
+                      
+                            <li class="nav-item">
+                                <button class="btn position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success" id="cart-counter">
+                                        0
+                                    </span>
+                                </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Off-canvas Menu for Mobile -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarOffcanvas" aria-labelledby="navbarOffcanvasLabel">
+        <div class="offcanvas-header">
+   
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-lg-none">
+          <div class="overflow-auto " style="height: 400px;">
+          <ul class="navbar-nav gap-4">
+            <li class="nav-item border-bottom py-2">
+                <a class="nav-link text-uppercase fs-6 fw-light" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item border-bottom py-2">
+                <a class="nav-link fs-6 text-uppercase fw-light" href="#">wrap</a>
+            </li>
+            <li class="nav-item border-bottom py-2">
+                <a class="nav-link fs-6 text-uppercase fw-light  " href="#">maxi</a>
+            </li>
+            <li class="nav-item border-bottom py-2">
+                <a class="nav-link fs-6 text-uppercase fw-light" href="#">midi</a>
+            </li>
+            <li class="nav-item border-bottom py-2">
+                <a class="nav-link fs-6 text-uppercase fw-light" href="#">mini</a>
+            </li>
+            <li class="nav-item border-bottom py-2 ">
+                <a class="nav-link fs-6 text-uppercase fw-light" href="#">Slip</a>
+            </li>
+              </ul>
+          </div>
+          <div class="col-12 py-3">
+            <li class="nav-item d-flex align-items-center gap-2 border-bottom py-3">
+              <!-- User icon button -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
+                   <p class="fs-5 text-uppercase fw-light mb-0">login</p>
+          </li>
+            <li class="nav-item d-flex align-items-center gap-3  py-3">
+              <!-- SRA logo and text -->
+              <img src="../img/s1.png" width="40" height="30" alt="SRA logo">
+              <p class="fs-5 text-uppercase fw-light mb-0">sra</p>
+          </li>
+          </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="collapse bg-light" id="searchForm">
+    <div class="container py-3 ">
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+            </button>
+        </form>
+    </div>
+</div>
+
+
+
+
+<!--endheader-->
+
+
+
+
+
+    <!--start section curser-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="../images/first.webp" alt="First slide">
+            <div class="carousel-caption">
+              <p>New Arrivals</p>
+              <button>Shop the Collection</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../images/tow.webp" alt="Second slide">
+            <div class="carousel-caption">
+              <p>Superbloom Valley</p>
+              <button>Dresses</button>
+              <button>Tops</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../images/three.webp" alt="Third slide">
+            <div class="carousel-caption">
+              <p>New Arrivals</p>
+              <button>Explore </button>
+              <button>All Dresses</button>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+<!--endsection curser-->
+    
+<!-- Products Section -->
+<section class="products-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">منتجاتنا</h2>
+        
+        <!-- Tabs Navigation -->
+        <ul class="nav nav-tabs justify-content-center mb-4" id="productsTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="new-tab" data-bs-toggle="tab" data-bs-target="#new" type="button" role="tab">
+                    New Collection
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="best-tab" data-bs-toggle="tab" data-bs-target="#best" type="button" role="tab">
+                    Best Sellers
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tabs Content -->
+        <div class="tab-content" id="productsTabContent">
+            <!-- New Collection Tab -->
+            <div class="tab-pane fade show active" id="new" role="tabpanel">
+                <div class="products-slider-container">
+                    <button class="scroll-btn prev" onclick="scrollProducts('newProducts', 'prev')">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="products-row" id="newProducts">
+                        <!-- Product 1 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../images/all1.webp" alt="New Product 1" class="product-img">
+                                <img src="../images/all2.webp" alt="New Product 1 Hover" class="product-img-hover">
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" onclick="addToCart(1)">
+                                        <i class="fas fa-shopping-cart"></i>
+                                       
+                                    </button>
+                                    <div class="quick-actions">
+                                        <button class="btn btn-light" title="المفضلة">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn btn-light" title="عرض سريع">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5>فستان صيفي أنيق</h5>
+                            <p>$55.00</p>
+                            <div class="rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="rating-percentage">(92%)</span>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../images/all3.webp" alt="New Product 2" class="product-img">
+                                <img src="../images/all2.webp" alt="New Product 2 Hover" class="product-img-hover">
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" onclick="addToCart(2)">
+                                        <i class="fas fa-shopping-cart"></i>
+                                      
+                                    </button>
+                                    <div class="quick-actions">
+                                        <button class="btn btn-light" title="المفضلة">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn btn-light" title="عرض سريع">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5>بلوزة عصرية</h5>
+                            <p>$40.00</p>
+                            <div class="rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9734;</span>
+                                <span class="rating-percentage">(85%)</span>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../images/all1.webp" alt="New Product 3" class="product-img">
+                                <img src="../images/all3.webp" alt="New Product 3 Hover" class="product-img-hover">
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" onclick="addToCart(3)">
+                                        <i class="fas fa-shopping-cart"></i>
+                                      
+                                    </button>
+                                    <div class="quick-actions">
+                                        <button class="btn btn-light" title="المفضلة">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn btn-light" title="عرض سريع">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5>فستان سهرة أنيق</h5>
+                            <p>$85.00</p>
+                            <div class="rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="rating-percentage">(95%)</span>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../images/all2.webp" alt="New Product 4" class="product-img">
+                                <img src="../images/all1.webp" alt="New Product 4 Hover" class="product-img-hover">
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" onclick="addToCart(4)">
+                                        <i class="fas fa-shopping-cart"></i>
+                                      
+                                    </button>
+                                    <div class="quick-actions">
+                                        <button class="btn btn-light" title="المفضلة">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn btn-light" title="عرض سريع">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5>تنورة كاجوال</h5>
+                            <p>$45.00</p>
+                            <div class="rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9734;</span>
+                                <span class="rating-percentage">(88%)</span>
+                            </div>
+                        </div>
+
+                        <!-- Product 5 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../images/all3.webp" alt="New Product 5" class="product-img">
+                                <img src="../images/all1.webp" alt="New Product 5 Hover" class="product-img-hover">
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" onclick="addToCart(5)">
+                                        <i class="fas fa-shopping-cart"></i>
+                                      
+                                    </button>
+                                    <div class="quick-actions">
+                                        <button class="btn btn-light" title="المفضلة">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn btn-light" title="عرض سريع">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5>فستان كلاسيكي</h5>
+                            <p>$65.00</p>
+                            <div class="rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="rating-percentage">(90%)</span>
+                            </div>
+                        </div>
+
+                        <!-- Product 6 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../images/first.webp" alt="New Product 6" class="product-img">
+                                <img src="../images/fist3.webp" alt="New Product 6 Hover" class="product-img-hover">
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" onclick="addToCart(6)">
+                                        <i class="fas fa-shopping-cart"></i>
+                                 
+                                    </button>
+                                    <div class="quick-actions">
+                                        <button class="btn btn-light" title="المفضلة">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="btn btn-light" title="عرض سريع">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5>بلوزة أنيقة</h5>
+                            <p>$35.00</p>
+                            <div class="rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9734;</span>
+                                <span class="rating-percentage">(87%)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="scroll-btn next" onclick="scrollProducts('newProducts', 'next')">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Best Sellers Tab -->
+            <div class="tab-pane fade" id="best" role="tabpanel">
+                <div class="products-slider-container">
+                  <button class="scroll-btn prev" onclick="scrollBestProducts('bestProducts', 'prev')">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                    <div class="products-row" id="bestProducts">
+                        <!-- المنتجات الحالية -->
+                        <div class="products-row" id="newProducts">
+                          <!-- Product 1 -->
+                          <div class="product-card">
+                              <div class="product-image">
+                                  <img src="../images/fist5.webp" alt="New Product 1" class="product-img">
+                                  <img src="../images/all2.webp" alt="New Product 1 Hover" class="product-img-hover">
+                                  <div class="product-actions">
+                                      <button class="btn btn-primary add-to-cart" onclick="addToCart(1)">
+                                          <i class="fas fa-shopping-cart"></i>
+
+                                      </button>
+                                      <div class="quick-actions">
+                                          <button class="btn btn-light" title="المفضلة">
+                                              <i class="far fa-heart"></i>
+                                          </button>
+                                          <button class="btn btn-light" title="عرض سريع">
+                                              <i class="far fa-eye"></i>
+                                          </button>
+                                      </div>
+                                  </div>
+                              </div>
+                              <h5>فستان صيفي أنيق</h5>
+                              <p>$55.00</p>
+                              <div class="rating">
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="rating-percentage">(92%)</span>
+                              </div>
+                          </div>
+                      
+                          <!-- Product 2 -->
+                          <div class="product-card">
+                              <div class="product-image">
+                                  <img src="../images/fist5.webp" alt="New Product 2" class="product-img">
+                                  <img src="../images/all2.webp" alt="New Product 2 Hover" class="product-img-hover">
+                                  <div class="product-actions">
+                                      <button class="btn btn-primary add-to-cart" onclick="addToCart(2)">
+                                          <i class="fas fa-shopping-cart"></i>
+                                    
+                                      </button>
+                                      <div class="quick-actions">
+                                          <button class="btn btn-light" title="المفضلة">
+                                              <i class="far fa-heart"></i>
+                                          </button>
+                                          <button class="btn btn-light" title="عرض سريع">
+                                              <i class="far fa-eye"></i>
+                                          </button>
+                                      </div>
+                                  </div>
+                              </div>
+                              <h5>بلوزة عصرية</h5>
+                              <p>$40.00</p>
+                              <div class="rating">
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9734;</span>
+                                  <span class="rating-percentage">(85%)</span>
+                              </div>
+                          </div>
+                      
+                          <!-- Product 3 -->
+                          <div class="product-card">
+                              <div class="product-image">
+                                  <img src="../images/all2.webp" alt="New Product 3" class="product-img">
+                                  <img src="../images/fist2.webp" alt="New Product 3 Hover" class="product-img-hover">
+                                  <div class="product-actions">
+                                      <button class="btn btn-primary add-to-cart" onclick="addToCart(3)">
+                                          <i class="fas fa-shopping-cart"></i>
+                                 
+                                      </button>
+                                      <div class="quick-actions">
+                                          <button class="btn btn-light" title="المفضلة">
+                                              <i class="far fa-heart"></i>
+                                          </button>
+                                          <button class="btn btn-light" title="عرض سريع">
+                                              <i class="far fa-eye"></i>
+                                          </button>
+                                      </div>
+                                  </div>
+                              </div>
+                              <h5>فستان سهرة أنيق</h5>
+                              <p>$85.00</p>
+                              <div class="rating">
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="rating-percentage">(95%)</span>
+                              </div>
+                          </div>
+                      
+                          <!-- Product 4 -->
+                          <div class="product-card">
+                              <div class="product-image">
+                                  <img src="../images/back.webp" alt="New Product 4" class="product-img">
+                                  <img src="../images/all2.webp" alt="New Product 4 Hover" class="product-img-hover">
+                                  <div class="product-actions">
+                                      <button class="btn btn-primary add-to-cart" onclick="addToCart(4)">
+                                          <i class="fas fa-shopping-cart"></i>
+                                          إضافة للسلة
+                                      </button>
+                                      <div class="quick-actions">
+                                          <button class="btn btn-light" title="المفضلة">
+                                              <i class="far fa-heart"></i>
+                                          </button>
+                                          <button class="btn btn-light" title="عرض سريع">
+                                              <i class="far fa-eye"></i>
+                                          </button>
+                                      </div>
+                                  </div>
+                              </div>
+                              <h5>تنورة كاجوال</h5>
+                              <p>$45.00</p>
+                              <div class="rating">
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9734;</span>
+                                  <span class="rating-percentage">(88%)</span>
+                              </div>
+                          </div>
+                      
+                          <!-- Product 5 -->
+                          <div class="product-card">
+                              <div class="product-image">
+                                  <img src="../images/all1.webp" alt="New Product 5" class="product-img">
+                                  <img src="../images/fist4.webp" alt="New Product 5 Hover" class="product-img-hover">
+                                  <div class="product-actions">
+                                      <button class="btn btn-primary add-to-cart" onclick="addToCart(5)">
+                                          <i class="fas fa-shopping-cart"></i>
+                                
+                                      </button>
+                                      <div class="quick-actions">
+                                          <button class="btn btn-light" title="المفضلة">
+                                              <i class="far fa-heart"></i>
+                                          </button>
+                                          <button class="btn btn-light" title="عرض سريع">
+                                              <i class="far fa-eye"></i>
+                                          </button>
+                                      </div>
+                                  </div>
+                              </div>
+                              <h5>فستان كلاسيكي</h5>
+                              <p>$65.00</p>
+                              <div class="rating">
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="rating-percentage">(90%)</span>
+                              </div>
+                          </div>
+                      
+                          <!-- Product 6 -->
+                          <div class="product-card">
+                              <div class="product-image">
+                                  <img src="../images/all2.webp" alt="New Product 6" class="product-img">
+                                  <img src="../images/fist6.webp" alt="New Product 6 Hover" class="product-img-hover">
+                                  <div class="product-actions">
+                                      <button class="btn btn-primary add-to-cart" onclick="addToCart(6)">
+                                          <i class="fas fa-shopping-cart"></i>
+                                  
+                                      </button>
+                                      <div class="quick-actions">
+                                          <button class="btn btn-light" title="المفضلة">
+                                              <i class="far fa-heart"></i>
+                                          </button>
+                                          <button class="btn btn-light" title="عرض سريع">
+                                              <i class="far fa-eye"></i>
+                                          </button>
+                                      </div>
+                                  </div>
+                              </div>
+                              <h5>بلوزة أنيقة</h5>
+                              <p>$35.00</p>
+                              <div class="rating">
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9733;</span>
+                                  <span class="star">&#9734;</span>
+                                  <span class="rating-percentage">(87%)</span>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <button class="scroll-btn next" onclick="scrollBestProducts('bestProducts', 'next')">
+                      <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Offcanvas Cart -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="cartOffcanvasLabel">Shopping Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div id="cart-items" class="cart-items">
+            <!-- سيتم إضافة محتويات السلة هنا ديناميكياً -->
+        </div>
+        
+        <div class="cart-total mt-3">
+            <h6>Total: $<span id="cart-total">0.00</span></h6>
+        </div>
+        
+        <div class="cart-actions mt-3">
+          <a href="#" class="btn-slide">checkout</a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+  
+<!--endsection-->
+<!--start sectionimages-->
+<section class="py-5">
+    <div class="ms-1">
+      <div class="d-flex flex-column gap-2 gap-md-0 flex-md-row">
+        <div class="col-12 col-md-4 position-relative">
+          <div class="zoom-container">
+            <img src="../images/all1.webp" alt="banner" class="img-fluid w-100 zoom-image">
+          </div>
+          <div class="position-absolute bottom-0 start-0 p-5 text-white">
+            <p class="text-uppercase fs-5 fw-light mb-2">superbloom</p>
+            <h3 class="text-uppercase fs-3  mb-3">new arrivals</h3>
+            <a href="#" class="btn-slide">Shop Now</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 position-relative">
+          <div class="zoom-container">
+            <img src="../images/all2.webp" alt="banner" class="img-fluid w-100 zoom-image">
+          </div>
+          <div class="position-absolute bottom-0 start-0 p-5 text-white">
+            <p class="text-uppercase fs-5 fw-light mb-2">summer</p>
+            <h3 class="text-uppercase fs-3 fw-bold mb-3">dresses</h3>
+            <a href="#" class="btn-slide">all collections</a>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-4 position-relative">
+          <div class="zoom-container">
+            <img src="../images/all3.webp" alt="banner" class="img-fluid w-100 zoom-image">  
+          </div>
+          <div class="position-absolute bottom-0 start-0 p-5 text-white">
+            <p class="text-uppercase fs-5 fw-light mb-2">magnolia</p>
+            <h3 class="text-uppercase fs-3 fw-bold mb-3">tops</h3>
+                      <a href="#" class="btn-slide">all collections</a>
+
+          </div>
+        </div>
+      </div>  
+    </div>
+  </section>
+<!--end sectionimages-->
+<!--start pograf-->
+<section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-12 text-center fade-in-left">
+          <h1 class="display-4 mb-4"><span class="text-uppercase fs-5 fw-light">Welcome To</span><br>Auguste the Label</h1>
+          <p class="fs-5 fw-light line-height-1">We started Auguste with a clear vision: to transcend trends, and instead design future vintage pieces</p>
+          <p class="fs-5 fw-light line-height-1"> that would be loved for seasons to come</p>
+        </div>
+        <div class="col-12 col-md-12 text-center">
+          <a href="#" class="btn-slide">Shop Now</a>
+          <a href="#" class="btn-slide">all collections</a>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--end pograf-->
+
+<!--start section word animathion-->
+<div class="tickerwrapper">
+    <ul class="list">
+        <li class="listitem"><span>This is list item 1</span></li>
+        <li class="listitem"><span>This is list item 2</span></li>
+        <li class="listitem"><span>This is list item 3</span></li>
+        <li class="listitem"><span>This is list item 4</span></li>
+        <li class="listitem"><span>This is list item 5</span></li>
+    </ul>
+</div>
+
+<script>
+    $(document).ready(function() {
+       var $tickerWrapper = $(".tickerwrapper");
+       var $list = $tickerWrapper.find("ul.list");
+       var $clonedList = $list.clone(); // استنساخ القائمة
+       var listWidth = 0;
+   
+       // حساب عرض القائمة كاملة
+       $list.find("li").each(function(i) {
+           listWidth += $(this).outerWidth(true); // جمع العرض الإجمالي
+       });
+   
+       // تحديد العرض الإجمالي للقائمتين
+       var totalWidth = listWidth * 2;
+   
+       // تعيين العرض الإجمالي
+       $list.add($clonedList).css({
+           "width": totalWidth + "px" // تعيين العرض الإجمالي
+       });
+   
+       // إضافة النسخة المستنسخة إلى الحاوية
+       $clonedList.addClass("cloned").appendTo($tickerWrapper);
+   
+       // تعريف الأنيميشن باستخدام GSAP (TimelineMax)
+       var infinite = new TimelineMax({repeat: -1, paused: true});
+       var time = 40; // وقت الحركة
+   
+       infinite
+           .fromTo($list, time, {x: 0}, {x: -listWidth, ease: Linear.easeNone}, 0) // الحركة من اليمين لليسار
+           .fromTo($clonedList, time, {x: listWidth}, {x: 0, ease: Linear.easeNone}, 0) // بدء النسخة المستنسخة عند نهاية الحركة
+           .set($list, {x: listWidth}) // إعادة تعيين العنصر الأصلي ليبدأ من اليمين بعد الانتهاء من الحركة
+           .to($clonedList, time, {x: -listWidth, ease: Linear.easeNone}, time)
+           .to($list, time, {x: 0, ease: Linear.easeNone}, time)
+           .progress(1).progress(0)
+           .play();
+   
+       // إيقاف وتشغيل الحركة عند التمرير فوق العنصر
+       $tickerWrapper.on("mouseenter", function(){
+           infinite.pause();
+       }).on("mouseleave", function(){
+           infinite.play();
+       });
+   });
+   
+            </script>
+<!--end section word animathion-->
+
+<!--section heigthscreen-->
+<div class="my-container">
+  <div class="continers">
+    <div class="card1">
+        <div class="images"><img src="../images/all2.webp" alt="none"></div>
+        <div class="text">
+            <h2>Our values</h2>
+            <p>Our love for mother earth drives us to operate in harmony with nature.</p>
+            <p>We place eco-friendliness over mass production, using consciously sourced natural fibres while ensuring we work to replenish the resources that we use.</p>
+        </div>
+    </div>
+    <div class="card2">
+        <div class="images"><img src="../images/all1.webp" alt="none"></div>
+        <div class="text">
+            <h2>Our values</h2>
+            <p>Our love for mother earth drives us to operate in harmony with nature.</p>
+            <p>We place eco-friendliness over mass production, using consciously sourced natural fibres while ensuring we work to replenish the resources that we use.</p>
+        </div>
+    </div>
+  </div>
+</div>
+<!--startsection with vidwo-->
+
+<section>
+    <div class="container py-3 py-lg-5">
+      <div class="row align-items-center gy-4">
+        <!-- Text Content -->
+        <div class="col-12 col-lg-5">
+          <div class="text-content animate_animated animate_fadeInRight">
+            <p class="lead text-muted">Magnolia</p>
+            <h2 class="display-4 fw-normal mb-3 mb-lg-4">Dreamy summer</h2>
+            <p class="text-start fs-6 fs-lg-5 fw-normal">
+              Inspired by an endless summer and the languid summer afternoons spent by the sea, where the sun's rays illuminate the evening sky. Magnolia is dreamy & carefree; she's delicate and feminine, playful and angelic; like postcards from summer's past, she's nostalgic yet with the excitement of something new.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="#" class="btn-slide">shop collections</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Media Content -->
+        <div class="col-12 col-lg-6 offset-lg-1">
+          <div class="media-wrapper position-relative">
+            <!-- Background Image -->
+            <div class="background-image">
+              <img src="../images/section.webp" class="img-fluid rounded-3 shadow w-100" alt="Background image">
+            </div>
+            
+            <!-- Video Overlay -->
+            <div class="video-overlay position-absolute top-50 start-0 translate-middle">
+              <video class="rounded-3 shadow-lg" width="300" height="auto" autoplay muted loop playsinline>
+                <source src="../images/one.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+<!--endsection with vidwo-->
+<!--endsection heigthscreen-->
+
+<section class="hero-section">
+    <div class="content">
+        <div class="text-container">
+            <h2>New collection is coming!</h2>
+            <h1>Sonnet Collection</h1>
+            <p>Invite romance into your wardrobe with our latest collection, Sonnet. Lightweight separates are artfully fashioned from merino wool, cashmere and cotton jersey. Evoking a sense of undone elegance with gold accents, bespoke prints and flattering silhouettes - magic is found in the finer details of this collection.</p>
+        </div>
+        <div class="countdown-container">
+            <div id="days" class="countdown-item">
+                <p>أيام</p>
+                <span id="countdown-days">0</span>
+            </div>
+            
+            <div id="hours" class="countdown-item">
+                <p>ساعات</p>
+                <span id="countdown-hours">0</span>
+            </div>
+            <div id="minutes" class="countdown-item">
+                <p>دقائق</p>
+                <span id="countdown-minutes">0</span>
+            </div>
+            <div id="seconds" class="countdown-item">
+                <p>ثواني</p>
+                <span id="countdown-seconds">0</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // تحديد تاريخ الهدف (100 يوم من اليوم)
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 100);  // إضافة 100 يوم
+    
+    // تحديث العد التنازلي كل ثانية
+    function updateCountdown() {
+        const now = new Date();
+        const timeRemaining = targetDate - now;
+    
+        // حساب الأيام، الساعات، الدقائق والثواني المتبقية
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+    
+        // عرض العد التنازلي
+        document.getElementById('countdown-days').textContent = days;
+        document.getElementById('countdown-hours').textContent = hours;
+        document.getElementById('countdown-minutes').textContent = minutes;
+        document.getElementById('countdown-seconds').textContent = seconds;
+    
+        // إذا انتهى الوقت، عرض رسالة
+        if (timeRemaining <= 0) {
+            document.getElementById('countdown-days').textContent = 0;
+            document.getElementById('countdown-hours').textContent = 0;
+            document.getElementById('countdown-minutes').textContent = 0;
+            document.getElementById('countdown-seconds').textContent = 0;
+        }
+    }
+    
+    // تحديث العد التنازلي كل ثانية
+    setInterval(updateCountdown, 1000);
+    </script>
+
+
+
+<!--sectiondropdown-->
+
+
+
+
+
+
+    
+
+<!--endsectiondropdown-->
+
+<!--sectionproductcard-->
+<section class="showproduct">
+    <button class="scroll-btn left" onclick="scrollToLeft()">&#10094;</button>
+    <div class="products">
+        <!-- First Card -->
+        <div class="cards">
+            <div class="images">
+                <img src="../images/all1.webp" alt="">
+            </div>
+            <div class="text">
+                <div>
+                    <img src="../images/gh.webp" alt="">
+                    <p>Desert Dandelion Grace Blouse Emerald</p>
+                    <h3> Sale price $135.00</h3>
+                </div>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="rating-percentage">(80%)</span>
+                </div>
+                <a href="#" class="btn-slide">Shop Now</a>
+            </div>
+        </div>
+
+        <!-- Second Card -->
+        <div class="cards">
+            <div class="images">
+                <img src="../images/all2.webp" alt="">
+            </div>
+            <div class="text">
+                <div>
+                    <img src="../images/gh.webp" alt="">
+                    <p>Sunshine Grace Blouse Yellow</p>
+                    <h3> Sale price $125.00</h3>
+                </div>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span>
+                    <span class="rating-percentage">(75%)</span>
+                </div>
+                <a href="#" class="btn-slide">Shop Now</a>
+            </div>
+        </div>
+
+        <!-- Third Card -->
+        <div class="cards">
+            <div class="images">
+                <img src="../images/all3.webp" alt="">
+            </div>
+            <div class="text">
+                <div>
+                    <img src="../images/gh.webp" alt="">
+                    <p>Evening Glow Grace Blouse Red</p>
+                    <h3> Sale price $140.00</h3>
+                </div>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="rating-percentage">(90%)</span>
+                </div>
+                <a href="#" class="btn-slide">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollToRight()">&#10095;</button>
+</section>
+<script>
+// Select the products container
+const productsContainer = document.querySelector('.products');
+
+// Scroll left function
+function scrollToLeft() {
+    productsContainer.scrollBy({ left: -300, behavior: 'smooth' });
+}
+
+// Scroll right function
+function scrollToRight() {
+    productsContainer.scrollBy({ left: 300, behavior: 'smooth' });
+}
+
+
+
+</script>
+<!--endsectionproductcard-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script>
+        function showTab(tabId) {
+          // إزالة الـ active من جميع الأزرار
+          const buttons = document.querySelectorAll('.tab-buttons button');
+          buttons.forEach(button => button.classList.remove('active'));
+      
+          // إخفاء جميع قوائم المنتجات
+          const productLists = document.querySelectorAll('.product-list');
+          productLists.forEach(list => list.classList.remove('active'));
+      
+          // عرض قائمة المنتجات التي تحتوي على الـ tabId المحدد
+          document.getElementById(tabId).classList.add('active');
+      
+          // تمييز الزر الذي تم النقر عليه
+          event.target.classList.add('active');
+        }
+      </script>
+
+
+<!--card-->
+<script>
+    const products = [
+    {
+        id: 1,
+        name: "قميص",
+        price: 99.99,
+        image: "https://placehold.co/200x200"
+    },
+    {
+        id: 2,
+        name: "بنطلون",
+        price: 149.99,
+        image: "https://placehold.co/200x200"
+    },
+    {
+        id: 3,
+        name: "حذاء",
+        price: 199.99,
+        image: "https://placehold.co/200x200"
+    }
+];
+
+let cart = [];
+let currentTab = 'tab1';
+
+// تعريف المتغيرات العامة
+const SCROLL_AMOUNT = 300;
+
+// تعريف المتغيرات العامة للتمرير
+let autoScrollIntervals = {};
+const SCROLL_INTERVAL = 3000; // 3 seconds
+
+// تبديل التابات
+function showTab(tabId) {
+    // إخفاء جميع التابات
+    document.querySelectorAll('.product-list').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // إزالة الكلاس النشط من جميع الأزرار
+    document.querySelectorAll('.tab-buttons button').forEach(button => {
+        button.classList.remove('active');
+    });
+    
+    // إظهار التاب المحدد
+    document.getElementById(tabId).classList.add('active');
+    
+    // تفعيل الزر المحدد
+    event.currentTarget.classList.add('active');
+    
+    currentTab = tabId;
+}
+
+// إضافة منتج للسلة
+function addToCart(productId) {
+    const product = document.querySelector([data-product-id="${productId}"]);
+    const productInfo = {
+        id: productId,
+        name: product.querySelector('h5').textContent,
+        price: parseFloat(product.querySelector('p').textContent.replace('$', '')),
+        image: product.querySelector('.product-img').src,
+        quantity: 1
+    };
+
+    const existingItem = cart.find(item => item.id === productId);
+    
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push(productInfo);
+    }
+
+    updateCartDisplay();
+    showCartNotification();
+}
+
+// تحديث عرض السلة
+function updateCartDisplay() {
+    const cartItems = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    const cartCounter = document.getElementById('cart-counter');
+
+    // تحديث محتوى السلة
+    cartItems.innerHTML = cart.map(item => `
+        <div class="cart-item mb-3">
+            <div class="d-flex align-items-center">
+                <img src="${item.image}" alt="${item.name}" class="me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                <div>
+                    <h6 class="mb-0">${item.name}</h6>
+                    <p class="mb-0">$${item.price}</p>
+                    <div class="quantity-controls mt-2">
+                        <button class="btn btn-sm btn-outline-secondary" onclick="updateQuantity(${item.id}, -1)">-</button>
+                        <span class="mx-2">${item.quantity}</span>
+                        <button class="btn btn-sm btn-outline-secondary" onclick="updateQuantity(${item.id}, 1)">+</button>
+                    </div>
+                </div>
+                <button class="btn btn-sm btn-danger ms-auto" onclick="removeFromCart(${item.id})">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+        </div>
+    `).join('');
+
+    // تحديث المجموع
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    cartTotal.textContent = total.toFixed(2);
+
+    // تحديث عداد السلة
+    const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCounter.textContent = itemCount;
+    cartCounter.style.display = itemCount > 0 ? 'block' : 'none';
+}
+
+// تحديث كمية المنتج
+function updateQuantity(productId, change) {
+    const item = cart.find(item => item.id === productId);
+    if (item) {
+        item.quantity += change;
+        if (item.quantity <= 0) {
+            removeFromCart(productId);
+        } else {
+            updateCartDisplay();
+        }
+    }
+}
+
+// حذف منتج من السلة
+function removeFromCart(productId) {
+    cart = cart.filter(item => item.id !== productId);
+    updateCartDisplay();
+}
+
+// إظهار إشعار إضافة المنتج
+function showCartNotification() {
+    const notification = document.createElement('div');
+    notification.className = 'cart-notification';
+    notification.textContent = 'تمت إضافة المنتج إلى السلة';
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.remove();
+    }, 2000);
+}
+
+// وظيفة التمرير
+function scrollProducts(containerId, direction) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    
+    const scrollAmount = 300; // مقدار التمرير في كل مرة
+    
+    if (direction === 'next') {
+        container.scrollLeft += scrollAmount;
+        // التحقق من وصولنا للنهاية
+        if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
+            container.scrollLeft = 0;
+        }
+    } else {
+        container.scrollLeft -= scrollAmount;
+        // التحقق من وصولنا للبداية
+        if (container.scrollLeft <= 0) {
+            container.scrollLeft = container.scrollWidth - container.offsetWidth;
+        }
+    }
+}
+
+// وظيفة بدء التمرير التلقائي
+function startAutoScroll(containerId) {
+    stopAutoScroll(containerId); // إيقاف أي تمرير سابق
+    
+    autoScrollIntervals[containerId] = setInterval(() => {
+        scrollProducts(containerId, 'next');
+    }, SCROLL_INTERVAL);
+}
+
+// وظيفة إيقاف التمرير التلقائي
+function stopAutoScroll(containerId) {
+    if (autoScrollIntervals[containerId]) {
+        clearInterval(autoScrollIntervals[containerId]);
+        delete autoScrollIntervals[containerId];
+    }
+}
+
+// إضافة مستمعي الأحداث عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', () => {
+    // إضافة data-product-id لكل منتج
+    document.querySelectorAll('.product-card').forEach((card, index) => {
+        card.setAttribute('data-product-id', index + 1);
+    });
+
+    // تحديث عرض السلة
+    updateCartDisplay();
+
+    // بدء التمرير التلقائي للتبويب النشط
+    startAutoScroll('newProducts');
+    
+    // إضافة مستمعي الأحداث للتبويبات
+    document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tab => {
+        tab.addEventListener('shown.bs.tab', (event) => {
+            const targetId = event.target.getAttribute('data-bs-target').replace('#', '');
+            const containerId = targetId === 'new' ? 'newProducts' : 'bestProducts';
+            
+            // إيقاف جميع عمليات التمرير وبدء التمرير للتبويب النشط
+            Object.keys(autoScrollIntervals).forEach(stopAutoScroll);
+            startAutoScroll(containerId);
+        });
+    });
+    
+    // إضافة مستمعي أحداث التحويم
+    ['newProducts', 'bestProducts'].forEach(containerId => {
+        const container = document.getElementById(containerId);
+        if (container) {
+            container.addEventListener('mouseenter', () => stopAutoScroll(containerId));
+            container.addEventListener('mouseleave', () => startAutoScroll(containerId));
+        }
+    });
+});
+function scrollBestProducts(containerId, direction) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    
+    const scrollAmount = 300;
+    
+    if (direction === 'next') {
+        container.scrollLeft += scrollAmount;
+        if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
+            container.scrollLeft = 0;
+        }
+    } else {
+        container.scrollLeft -= scrollAmount;
+        if (container.scrollLeft <= 0) {
+            container.scrollLeft = container.scrollWidth - container.offsetWidth;
+        }
+    }
+}
+
+// وظائف التمرير التلقائي المستقلة
+function startNewProductsAutoScroll() {
+    stopAutoScroll('newProducts');
+    autoScrollIntervals['newProducts'] = setInterval(() => {
+        scrollProducts('newProducts', 'next');
+    }, SCROLL_INTERVAL);
+}
+
+function startBestProductsAutoScroll() {
+    stopAutoScroll('bestProducts');
+    autoScrollIntervals['bestProducts'] = setInterval(() => {
+        scrollBestProducts('bestProducts', 'next');
+    }, SCROLL_INTERVAL);
+}
+
+// ... rest of the existing code ...
+
+document.addEventListener('DOMContentLoaded', () => {
+    // بدء التمرير التلقائي لكلا التابين
+    startNewProductsAutoScroll();
+    startBestProductsAutoScroll();
+    
+    // مستمعي أحداث التحويم للتاب الأول
+    const newProductsContainer = document.getElementById('newProducts');
+    if (newProductsContainer) {
+        newProductsContainer.addEventListener('mouseenter', () => stopAutoScroll('newProducts'));
+        newProductsContainer.addEventListener('mouseleave', () => startNewProductsAutoScroll());
+    }
+    
+    // مستمعي أحداث التحويم للتاب الثاني
+    const bestProductsContainer = document.getElementById('bestProducts');
+    if (bestProductsContainer) {
+        bestProductsContainer.addEventListener('mouseenter', () => stopAutoScroll('bestProducts'));
+        bestProductsContainer.addEventListener('mouseleave', () => startBestProductsAutoScroll());
+    }
+});
+</script>
+
+</body>
+</html>

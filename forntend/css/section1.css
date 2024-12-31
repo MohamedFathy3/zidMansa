@@ -1,0 +1,537 @@
+.btn-slide {
+    position: relative;
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 10px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid #000;
+    overflow: hidden;
+    transition: color 0.3s ease;
+  }
+  
+  .btn-slide:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+  
+  .btn-slide:hover {
+    color: #fff;
+  }
+  
+  .btn-slide:hover:before {
+    left: 0;
+  }
+  
+  
+    .media-wrapper {
+      height: 600px;
+      perspective: 1000px;
+    }
+    
+    .background-image  {
+      width: 400px;
+      height: 600px;
+      margin-left: 100px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .background-image:hover img {
+      transform: scale(1.02);
+    }
+    
+    .video-overlay video {
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border-radius: 5px;
+      margin-left: 200px;
+     
+      
+    }
+    
+    .text-content {
+      opacity: 0;
+      animation: fadeInRight 1s ease forwards;
+    }
+    
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @media (max-width: 768px) {
+      .video-overlay video {
+        width: 200px; /* حجم أصغر للفيديو على الشاشات الصغيرة */
+        margin-top: -49px;
+        margin-left: 615px;
+      }
+      .background-image  {
+          width: 322px;
+          height: 600px;
+           margin-left: 0;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+      .display-4 {
+        font-size: calc(1.8rem + 1.5vw); /* حجم خط متجاوب للعنوان */
+      }
+    }
+    /* Tabs Section */
+  .tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .tab-buttons button {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #ddd;
+    background: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .tab-buttons button.active {
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+  }
+  
+  /* Product List Section */
+  .product-list {
+    display: none;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding: 1rem 0;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Ensure products stop at the start of each item */
+  }
+  
+  .product-list.active {
+    display: flex;
+  }
+  
+  /* Style for Product Cards */
+  .product-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  /* Style for Product Images */
+  .product-image {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .product-img,
+  .product-img-hover {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+  }
+  
+  .product-img-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  /* Product Actions Overlay */
+  .product-actions {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  
+  .quick-actions {
+    display: flex;
+    gap: 5px;
+  }
+  
+  /* Hover Effects */
+  .product-card:hover .product-img-hover {
+    opacity: 1;
+  }
+  
+  .product-card:hover .product-actions {
+    bottom: 0;
+    opacity: 1;
+  }
+  
+  /* Buttons Styling */
+  .add-to-cart {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  
+  .quick-actions .btn {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+  }
+  
+  .quick-actions .btn:hover {
+    background: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+  }
+  
+  /* Animation for buttons */
+  .add-to-cart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .quick-actions .btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Rating Stars */
+  .rating {
+    margin-top: 10px;
+  }
+  
+  .star {
+    color: #ffc107;
+    font-size: 14px;
+  }
+  
+  .rating-percentage {
+    color: #6c757d;
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  
+  /* Custom Scrollbar */
+  .product-list::-webkit-scrollbar {
+    height: 8px; /* Scrollbar height */
+  }
+  
+  .product-list::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+  
+  .product-list::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  .product-card h5{
+    margin:10px 0 0 0 ;
+    opacity: .7; 
+    font-size: 13px; 
+    letter-spacing: 1px;
+     width: 100%;
+  }
+  .product-card .rating span:last-child{
+    opacity: .7;
+  }
+  .draggable {
+    display: flex;
+    gap: 20px;
+    overflow-x: hidden; /* Disable the scrollbar */
+    cursor: grab;
+  }
+  .draggable:active {
+    cursor: grabbing;
+  }
+  /* Scroll Button */
+  .product-list::-webkit-scrollbar {
+    display: none; /* إخفاء شريط التمرير في كروم */
+  }
+  .product-list.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+  }
+  .product-list {
+    cursor: grab;
+    cursor: -webkit-grab;
+  }
+  
+  .scroll-button {
+  
+    position: relative;
+    left: 50%;
+    /* transform: translateX(-56%); */
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex
+  ;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* opacity: 0.8; */
+    width:50px;
+    transform: translateY(-22px);
+  
+  }
+  
+  .scroll-button span {
+    font-size: 20px;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .container h2:first-child{
+    text-align: center;
+    opacity: .7;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+  /* Add a smooth scroll effect */
+  html {
+    scroll-behavior: smooth;
+  }
+  @media screen and (max-width:780px) {
+    .scroll-button {
+  
+        position: relative;
+        left: 46%;
+        /* transform: translateX(-56%); */
+        background-color: white;
+        border-radius: 50%;
+        padding: 10px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: flex
+    ;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        /* opacity: 0.8; */
+        width:60px;
+        transform: translateY(-22px);
+    
+    }
+  }
+  
+  .cart-notification {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #28a745;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 5px;
+      animation: slideIn 0.3s ease-out;
+      z-index: 1000;
+  }
+  
+  @keyframes slideIn {
+      from {
+          transform: translateX(100%);
+          opacity: 0;
+      }
+      to {
+          transform: translateX(0);
+          opacity: 1;
+      }
+  }
+  
+  /* Tabs Styling */
+  .nav-tabs {
+      border: none;
+      margin-bottom: 30px;
+  }
+  
+  .nav-tabs .nav-item {
+      margin: 0 10px;
+  }
+  
+  .nav-tabs .nav-link {
+      border: none;
+      color: #6c757d;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      position: relative;
+      transition: all 0.3s ease;
+  }
+  
+  .nav-tabs .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #0d6efd;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+  }
+  
+  .nav-tabs .nav-link:hover {
+      color: #0d6efd;
+  }
+  
+  .nav-tabs .nav-link.active {
+      color: #0d6efd;
+      background: transparent;
+      border: none;
+  }
+  
+  .nav-tabs .nav-link.active::after {
+      transform: scaleX(1);
+  }
+  
+  /* Tab Content Animation */
+  .tab-pane {
+      animation: fadeIn 0.5s ease;
+  }
+  
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+          transform: translateY(10px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+  
+  /* Products Grid */
+  .row {
+      margin-right: -15px;
+      margin-left: -15px;
+  }
+  
+  .col {
+      padding: 15px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+      .nav-tabs .nav-item {
+          margin: 0 5px;
+      }
+  
+      .nav-tabs .nav-link {
+          font-size: 1rem;
+          padding: 8px 15px;
+      }
+  }
+  
+  /* Slider Container */
+  .products-slider-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding: 0 40px;
+  }
+  
+  /* Products Row */
+  .products-row {
+      display: flex;
+      gap: 20px;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      padding: 20px 0;
+  }
+  
+  .products-row::-webkit-scrollbar {
+      display: none;
+  }
+  
+  /* Product Card in Slider */
+  .products-row .product-card {
+      flex: 0 0 auto;
+      width: 280px;
+      min-width: 280px;
+  }
+  
+  /* Scroll Buttons */
+  .scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.3s ease;
+  }
+  
+  .scroll-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .scroll-btn.prev {
+      left: 0;
+  }
+  
+  .scroll-btn.next {
+      right: 0;
+  }
+  
+  .scroll-btn[style*="opacity: 0.5"] {
+      pointer-events: none;
+  }
+  
+  /* Hide buttons when not needed */
+  .scroll-btn.hidden {
+      opacity: 0;
+      pointer-events: none;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+      .products-slider-container {
+          padding: 0 30px;
+      }
+  
+      .products-row .product-card {
+          min-width: 220px;
+      }
+  
+      .scroll-btn {
+          width: 30px;
+          height: 30px;
+      }
+  }
+  

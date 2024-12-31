@@ -1,0 +1,43 @@
+.zoom-container {
+        
+    overflow: hidden;
+  }
+  .zoom-image {
+      transition: transform 2s ease;
+  }
+  .zoom-image:hover {
+      transform: scale(1.1);
+}
+
+
+
+
+
+
+
+ /* start text anmations */
+.tickerwrapper {
+    position: relative;
+    width: 100%;
+    height: 222px;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 41px;
+    font-weight: 700;
+}
+
+ul.list {
+    display:flex; /* استخدام inline-flex لتوزيع العناصر في سطر واحد */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap; /* منع التفاف النصوص */
+    position: absolute;
+    top: 50px;
+    color: rgb(199, 135, 107);
+    font-size: 60px;
+}
+
+ul.list li {
+    padding-left: 20px; /* إضافة مسافة بين العناصر */
+}
